@@ -1,0 +1,20 @@
+.card-body a {
+    word-break: break-all;
+  }
+
+  .articleHeadline {
+    line-height: 1.5;
+  }
+
+  body{
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxUY_ZuvQ-M529wVfLD8BlMCxDhXkCFWMtVUhXIE6gIRecmMs4EA);
+  }
+
+  button{
+      color: rgb(1, 0, 4);
+      background-color: rgb(148, 174, 237) ;
+  }
+  .card-header{
+      color: rgb(1, 0, 4);
+      background-color: rgb(148, 174, 237) ;  
+  }

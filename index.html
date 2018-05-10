@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>T-Schedule</title>
+  
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  
+  <style>
+    .card-body a {
+      word-break: break-all;
+    }
+
+    .articleHeadline {
+      line-height: 1.5;
+    }
+
+    body{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxUY_ZuvQ-M529wVfLD8BlMCxDhXkCFWMtVUhXIE6gIRecmMs4EA);
+    }
+
+    .button{
+        color: rgb(1, 0, 4);
+        background-color: rgb(148, 174, 237) ;
+    }
+    .card-header{
+        color: rgb(1, 0, 4);
+        background-color: rgb(148, 174, 237) ;  
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+
+    <!-- Jumbotron for Title -->
+    <div class="jumbotron" style="background-color: rgb(148, 174, 237) ; color: rgb(1, 0, 4);">
+      <h1 class="text-center">
+        <strong>
+          <i class="fa fa-newspaper-o"></i>Anytime is Train Time</strong>
+          
+      </h1>
+      <h6 class="text-center">
+              "I'm late, I'm late, for a Very Important Date!"
+      </h6>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+          <br>
+  
+          <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+          <div class="card">
+  
+            <!-- Panel Heading for the retrieved articles box -->
+            <div class="card-header">
+              <strong>
+                <i class="fa fa-table"></i> Current Train Schedule</strong>
+            </div>
+  
+            <!-- This main panel will hold each of the resulting articles -->
+            <div class="card-body" id="trainInfo-section">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col" id="trainName-input">Train Name</th>
+                        <th scope="col" id="destination-input">Destination</th>
+                        <th scope="col" id="frequency-input">Frequency (mins)</th>
+                        <th scope="col" id="nextArrival-input">Next Arrival</th>
+                        <th scope="col" id="minsAwy-input">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="train-info">
+
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+        <!-- First panel is for handling the search parameters -->
+        <div class="card">
+          <div class="card-header">
+            <strong>
+              <i class="fa fa-list-alt"></i>Add Train</strong>
+          </div>
+          <div class="card-body">
+
+            <!-- Here we create an HTML Form for handling the inputs-->
+            <form role="form">
+
+              <!-- Here we have the train name-->
+              <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" id="train-name">
+              </div>
+
+              <!-- Here we have the destination  -->
+              <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" class="form-control" id="destination">
+              </div>
+
+              <!-- Here we capture the arrival Parameter-->
+              <div class="form-group">
+                <label for="train-arrival">First Train Time (HH:HH - Military Time)</label>
+                <input type="text" class="form-control" id="train-arrival">
+              </div>
+
+              <!-- Here we capture the mins away Parameter -->
+              <div class="form-group">
+                <label for="tFrequency">Frequency (mins)</label>
+                <input type="text" class="form-control" id="tFrequency">
+              </div>
+
+              <!-- Here we have our final submit button -->
+              <button type="submit" class="add-train" id="add-train">
+                <i class="fa fa-search"></i>Submit</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Footer Region -->
+    <div class="row">
+      <div class="col-sm-12">
+
+        <!-- Line Break followed by closing -->
+        <hr>
+        <h5 class="text-center">
+          <small> 
+            <i class="fa fa-heart"></i>
+          </small>
+        </h5>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+  <!-- jQuery JS -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+ 
+
+  <!-- Code to the JavaScript File -->
+  <script src= "assets/javascript/logic.js"></script>
+
+</body>
+
+</html>
